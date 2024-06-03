@@ -206,7 +206,13 @@ function BlackKey({ multi }: { multi: number }) {
          requestAnimationFrame(() => {
             beam.style.height = `${currentHeight}px`;           
             beam.style.translate = `0px -${window.innerHeight}px`;
+            
           })
+
+          setTimeout(() => {
+            document.body.removeChild(beam);
+            return;
+          }, 3000);
     
         }
       });
